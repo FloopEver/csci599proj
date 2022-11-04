@@ -45,6 +45,7 @@ DerivedDataCache/
 UnrealHeaderTool/
 UnrealPak/
 obj/
+.DS_Store
 .vs/
 .vscode/
 .visuallint/
