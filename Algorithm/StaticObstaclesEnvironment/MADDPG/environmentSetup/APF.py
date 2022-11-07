@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 from Algorithm.StaticObstaclesEnvironment.MADDPG.tools.calculateFunTools import distanceCost, getUnitVec, angleVec
 from Algorithm.StaticObstaclesEnvironment.MADDPG.tools.drawFunTools import drawEnv
-from Algorithm.StaticObstaclesEnvironment.StaticObstacles import Obstacle
+from Algorithm.StaticObstaclesEnvironment.MADDPG.environmentSetup.StaticObstacles import Obstacle
 
 
 class APF:
