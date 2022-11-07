@@ -18,7 +18,7 @@ client.confirmConnection()
 # more info: https://answers.unrealengine.com/questions/543807/whats-the-difference-between-tag-and-tag.html
 #            https://answers.unrealengine.com/revisions/790629.html
 
-# below works in Blocks environment
+# below works in Blocks environment.py
 
 #------------------------------------ Get current pose ------------------------------------------------
 

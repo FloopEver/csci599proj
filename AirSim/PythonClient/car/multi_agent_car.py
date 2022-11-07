@@ -5,7 +5,7 @@ import os
 import setup_path 
 import time
 
-# Use below in settings.json with blocks environment
+# Use below in settings.json with blocks environment.py
 """
 {
 	"SettingsVersion": 1.2,

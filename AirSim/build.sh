@@ -134,7 +134,7 @@ rsync -a --delete MavLinkCom/include AirLib/deps/MavLinkCom
 rsync -a --delete AirLib Unreal/Plugins/AirSim/Source
 rm -rf Unreal/Plugins/AirSim/Source/AirLib/src
 
-# Update all environment projects
+# Update all environment.py projects
 for d in Unreal/Environments/* ; do
     [ -L "${d%/}" ] && continue
     $d/clean.sh

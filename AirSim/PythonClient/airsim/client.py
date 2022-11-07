@@ -223,7 +223,7 @@ class VehicleClient:
 #time - of - day control
     def simSetTimeOfDay(self, is_enabled, start_datetime = "", is_start_datetime_dst = False, celestial_clock_speed = 1, update_interval_secs = 60, move_sun = True):
         """
-        Control the position of Sun in the environment
+        Control the position of Sun in the environment.py
 
         Sun's position is computed using the coordinates specified in `OriginGeopoint` in settings for the date-time specified in the argument,
         else if the string is empty, current date & time is used
@@ -500,7 +500,7 @@ class VehicleClient:
 
     def simSetObjectPose(self, object_name, pose, teleport = True):
         """
-        Set the pose of the object(actor) in the environment
+        Set the pose of the object(actor) in the environment.py
 
         The specified actor must have Mobility set to movable, otherwise there will be undefined behaviour.
         See https://www.unrealengine.com/en-US/blog/moving-physical-objects for details on how to set Mobility and the effect of Teleport parameter
@@ -543,7 +543,7 @@ class VehicleClient:
 
     def simListSceneObjects(self, name_regex = '.*'):
         """
-        Lists the objects present in the environment
+        Lists the objects present in the environment.py
 
         Default behaviour is to list all objects, regex can be used to return smaller list of matching objects or actors
 
@@ -822,7 +822,7 @@ class VehicleClient:
 
     def simGetGroundTruthEnvironment(self, vehicle_name = ''):
         """
-        Get ground truth environment state
+        Get ground truth environment.py state
 
         The position inside the returned EnvironmentState is in the frame of the vehicle's starting point
 
@@ -830,7 +830,7 @@ class VehicleClient:
             vehicle_name (str, optional): Name of the vehicle
 
         Returns:
-            EnvironmentState: Ground truth environment state
+            EnvironmentState: Ground truth environment.py state
         """
         env_state = self.client.call('simGetGroundTruthEnvironment', vehicle_name)
         return EnvironmentState.from_msgpack(env_state)
@@ -1066,7 +1066,7 @@ class VehicleClient:
 
     def simCreateVoxelGrid(self, position, x, y, z, res, of):
         """
-        Construct and save a binvox-formatted voxel grid of environment
+        Construct and save a binvox-formatted voxel grid of environment.py
 
         Args:
             position (Vector3r): Position around which voxel grid is centered in m

@@ -4,7 +4,7 @@ import airsim
 import sys
 import time
 
-print("""This script is designed to fly on the streets of the Neighborhood environment
+print("""This script is designed to fly on the streets of the Neighborhood environment.py
 and assumes the unreal position of the drone is [160, -1500, 120].""")
 
 client = airsim.MultirotorClient()

@@ -13,7 +13,7 @@ airsim.wait_key('Press any key to set all object IDs to 0')
 found = client.simSetSegmentationObjectID("[\w]*", 0, True);
 print("Done: %r" % (found))
 
-#for block environment
+#for block environment.py
 
 airsim.wait_key('Press any key to change one ground object ID')
 found = client.simSetSegmentationObjectID("Ground", 20);
@@ -24,7 +24,7 @@ airsim.wait_key('Press any key to change all ground object ID')
 found = client.simSetSegmentationObjectID("ground[\w]*", 22, True);
 print("Done: %r" % (found))
 
-##for neighborhood environment
+##for neighborhood environment.py
 
 #set object ID for sky
 found = client.simSetSegmentationObjectID("SkySphere", 42, True);

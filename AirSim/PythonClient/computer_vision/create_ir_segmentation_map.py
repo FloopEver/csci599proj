@@ -109,13 +109,13 @@ def set_segmentation_ids(segIdDict, tempEmissivityNew, client):
         set_segmentation_ids
 
     description::
-        Set stencil IDs in environment so that stencil IDs correspond to
+        Set stencil IDs in environment.py so that stencil IDs correspond to
         simulated thermal digital counts (e.g., if elephant has a simulated
         digital count of 219, set stencil ID to 219).
 
     input::
         segIdDict
-            dictionary mapping environment object names to the object names in
+            dictionary mapping environment.py object names to the object names in
             the first column of tempEmissivityNew 
         tempEmissivityNew
             numpy array containing object names and corresponding simulated
@@ -208,5 +208,5 @@ if __name__ == '__main__':
     tempEmissivityNew = get_new_temp_emiss_from_radiance(tempEmissivity, 
                                                          response)
 
-    #Set IDs in AirSim environment.
+    #Set IDs in AirSim environment.py.
     set_segmentation_ids(segIdDict, tempEmissivityNew, client)

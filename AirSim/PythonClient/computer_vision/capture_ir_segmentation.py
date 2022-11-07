@@ -156,7 +156,7 @@ def main(client,
         client
             connection to AirSim (e.g., client = MultirotorClient() for UAV)
         objectList
-            list of tag names within the AirSim environment, corresponding to 
+            list of tag names within the AirSim environment.py, corresponding to
             objects to follow (add tags by clicking on object, going to 
             Details, Actor, and Tags, then add component)
         pitch

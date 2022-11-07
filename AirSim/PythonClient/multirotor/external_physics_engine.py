@@ -6,7 +6,7 @@ import time
 # It allows you to control the drone through setVehiclePose and obtain collision information.
 # It is especially useful for injecting your own flight dynamics model to the AirSim drone.
 
-# Use Blocks environment to see the drone colliding and seeing the collision information 
+# Use Blocks environment.py to see the drone colliding and seeing the collision information
 # in the command prompt.
 
 # Add this line to your settings.json before running AirSim:

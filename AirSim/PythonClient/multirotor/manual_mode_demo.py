@@ -1,5 +1,5 @@
 """
-For connecting to the AirSim drone environment and testing API functionality
+For connecting to the AirSim drone environment.py and testing API functionality
 """
 import setup_path 
 import airsim

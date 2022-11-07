@@ -6,7 +6,7 @@ import pprint
 import setup_path 
 import tempfile
 
-# Use below in settings.json with Blocks environment
+# Use below in settings.json with Blocks environment.py
 """
 {
 	"SeeDocsAt": "https://github.com/Microsoft/AirSim/blob/main/docs/settings.md",

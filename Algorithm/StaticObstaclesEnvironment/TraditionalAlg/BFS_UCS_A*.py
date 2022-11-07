@@ -158,15 +158,6 @@ def buildGraph(data):
                 ci = i.split(" ")
                 G.add_edge(target, i, weight(int(cs[1]), int(cs[2]), int(ci[1]), int(ci[2])))
 
-
-    # print(G.nodes)
-    # for i in G.nodes:
-    #     print (i)
-    #     for j in G.nodes[i].neighbor:
-    #         print(j.id, end=",")
-    #     print("---")
-    # print("Finished")
-
     return G
 
 def gsearch(data, G):
@@ -184,17 +175,10 @@ def gsearch(data, G):
     explored_set = []
     while frontier != []:
         node = frontier.pop(0)
-
-
-        # if node[0].id == target:
-        #     print ("SUCCESS")
-        #     return
-
         if node[0].id == target:
             res = []
-            # print(explored_set)
+
             while explored_set != []:
-                #print (explored_set[-1][0].id, node[2])
                 if explored_set[-1][0].id == node[2]:
                     res = [node[0].id + " " + str(node[0].show_weight(explored_set[-1][0]))] + res
                     node = explored_set.pop()
@@ -202,17 +186,13 @@ def gsearch(data, G):
                 else:
                     explored_set.pop()
             res = [G.nodes[start].id + " " + "0"] + res
-            # print ("SUCCESS")
+            print("SUCCESS")
             return res
 
 
         explored_set = explored_set + [node]
-        # print("node:" + node)
         expand = node[0].neighbor
-        # print (expand)
         for new_node in expand:
-            # print(new_node)
-            # print (explored_set)
             if not any(new_node in check for check in explored_set):
                 if not any(new_node in ff for ff in frontier):
                     g = new_node.show_weight(node[0]) + float(node[1])
@@ -244,12 +224,6 @@ def gsearch(data, G):
                             frontier[ct][1] = f
                             frontier[ct][2] = node[0].id
 
-
-
-        # print("explored_set===============")
-        # print (explored_set)
-        # print("frontier===============")
-        # print (frontier)
     return "FAIL"
 
 def writeOutput(output):
@@ -307,7 +281,6 @@ def getPath(temp, i, j, mode):
 def main():
     lines = readInput("testcases.txt")
     data = processInput(lines)
-    # print(data)
     G = buildGraph(data)
     re = gsearch(data, G)
 
@@ -320,8 +293,6 @@ def main():
             cost = int(i.split(" ")[-1])
             sum = sum + cost
 
-        
-        # print(re)
         temp = [] 
         if len(re) == 1:
             temp.append(re[0])
@@ -341,7 +312,7 @@ def main():
                     temp.append(re[i + 1])
 
         temp = [str(sum)] + [str(len(temp))] + temp
-        # print (temp)
+        print (temp)
         writeOutput(temp)
 
 if __name__ == "__main__":

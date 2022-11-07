@@ -45,7 +45,7 @@ meshes=client.simGetMeshPositionVertexBuffers()
 
 index=0
 for m in meshes:
-    # Finds one of the cube meshes in the Blocks environment
+    # Finds one of the cube meshes in the Blocks environment.py
     if 'cube' in m.name:
 
         # Code from here on relies on libigl. Libigl uses pybind11 to wrap C++ code. So here the built pyigl.so

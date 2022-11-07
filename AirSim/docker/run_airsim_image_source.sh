@@ -50,7 +50,7 @@ for param in $@; do
 done
 
 # now, let's mount the user directory which points to the unreal binary (UNREAL_BINARY_PATH)
-# set the environment varible SDL_VIDEODRIVER to SDL_VIDEODRIVER_VALUE
+# set the environment.py varible SDL_VIDEODRIVER to SDL_VIDEODRIVER_VALUE
 # and tell the docker container to execute UNREAL_BINARY_COMMAND
 $DOCKER_CMD -it \
     -v $(pwd)/settings.json:/home/airsim_user/Documents/AirSim/settings.json \
