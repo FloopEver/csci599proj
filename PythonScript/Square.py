@@ -6,22 +6,22 @@ import os
 client = airsim.MultirotorClient()
 client.confirmConnection()
 
-for i in range(4):
-    client.enableApiControl(True, "UAV"+str(i+1))
-    client.armDisarm(True, "UAV"+str(i+1))
 
-    client.takeoffAsync(vehicle_name="UAV"+str(i+1)).join()  # takeoff
+client.enableApiControl(True)
+client.armDisarm(True)
+
+client.takeoffAsync().join()  # takeoff
 
     # square flight
-    client.moveToZAsync(-3, 1, vehicle_name="UAV"+str(i+1)).join()  # 上升到3m高度
-    client.moveToPositionAsync(5, 0, -3, 1, vehicle_name="UAV"+str(i+1)).join()  # 飞到（5,0）点坐标
-    client.moveToPositionAsync(5, 5, -3, 1, vehicle_name="UAV"+str(i+1)).join()  # 飞到（5,5）点坐标
-    client.moveToPositionAsync(0, 5, -3, 1, vehicle_name="UAV"+str(i+1)).join()  # 飞到（0,5）点坐标
-    client.moveToPositionAsync(0, 0, -3, 1, vehicle_name="UAV"+str(i+1)).join()  # 回到（0,0）点坐标
+client.moveToZAsync(-3, 1).join()  # 上升到3m高度
+client.moveToPositionAsync(-71.9, 53.5, -11.48, 1).join()  # 飞到（5,0）点坐标
+# client.moveToPositionAsync(5, 5, -3, 1).join()  # 飞到（5,5）点坐标
+# client.moveToPositionAsync(0, 5, -3, 1).join()  # 飞到（0,5）点坐标
+# client.moveToPositionAsync(0, 0, -3, 1).join()  # 回到（0,0）点坐标
 
-    client.landAsync(vehicle_name="UAV"+str(i+1)).join()  # land
-    client.armDisarm(False)  # lock
-    client.enableApiControl(False)  # release control
+client.landAsync().join()  # land
+client.armDisarm(False)  # lock
+client.enableApiControl(False)  # release control
 
 
 
